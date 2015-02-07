@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Superior Game</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />       
+  <script type="text/javascript" src="Entity.js"></script>
+  <script type="text/javascript" src="Tile.js"></script>
+  <script type="text/javascript" src="Maps.js"></script>  
+  <script type="text/javascript" src="Map.js"></script>
+  <script type="text/javascript" src="Movement.js"></script>
+  <script type="text/javascript" src="PlayerAction.js"></script>
+    <script type="text/javascript" src="TouchReading.js"></script>
+    <script type="text/javascript" src="MobMovement.js"></script>
+  <script type="text/javascript" src="Collision.js"></script>
+  <script type="text/javascript" src="Graphics.js"></script>  
+  <script type="text/javascript" src="Game.js"></script>
+  <script type="text/javascript" src="Cheat.js"></script>
+  </head>
+  <body onload="map_render();">
+  <div id="container">
+    <h1>Superior Fantastico de Facto game</h1>
+    <div id="game">
+    
+      <canvas id="gameCanvas" width="648" height="480" style="border:1px solid #000000"></canvas>
+    </div>
+   <div id="sounds">
+   <a href="#" onclick="if(document.getElementById('musiikki').volume<1){document.getElementById('musiikki').volume+=0.1;}">+</a>
+   &nbsp;Music&nbsp;
+   <a href="#" onclick="if(document.getElementById('musiikki').volume>0.1){document.getElementById('musiikki').volume-=0.1;}">-</a>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="#" onclick="document.getElementById('musiikki').muted=!document.getElementById('musiikki').muted">Music mute/unmute</a>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="#" onclick="effects_mute();">Effects mute/unmute</a>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="#" onclick="if(show_check){show_check=false;}else{show_check=true;}">Show collision area</a>     
+  </div>
+  <div>
+  <b>Controls&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> Move: W-A-D or Arrow keys, Down or S set checkpoint 
+  </div>  
+    <div id="info">      
+This game is all about fancy adventures of the great and mighty fellow named <span onclick="if(collision){collision=false;}else{collision=true;}">Bob</span>! <span onclick="cheat();">Bob</span> is on a mission, where he needs to explore the moon and find a way back to the space module Sputnik. Unfortunately, Moon has lots of trash laying around, and if Bob somehow hits one of them, he will instantly teleport back to previous checkpoint. Also, there are ****loads of money spread around the surface and if Bob manages to collect 10 coins, he will feel himself stronger than ever before and gain 1 extra life !      
+    </div>  
+   </div>
+   
+   <div id="oikea_nappi"></div>
+   <div id="vasen_nappi"></div>
+   <div id="hyppy_nappi"></div>
+   <div id="check_nappi"></div>
+   
+  <audio id="musiikki" preload="auto" autoplay loop>
+  <source src="resources/musiikki.mp3" type="audio/mpeg">
+  </audio>   
+   
+  <audio id="jump" preload="auto">
+  <source src="resources/jump.mp3" type="audio/mpeg">
+  </audio>
+  
+  <audio id="land" preload="auto">
+  <source src="resources/land.mp3" type="audio/mpeg">
+  </audio>  
+  
+  <audio id="coin" preload="auto">
+  <source src="resources/coin.mp3" type="audio/mpeg">
+  </audio>  
+  
+  <audio id="mine" preload="auto">
+  <source src="resources/mine.mp3" type="audio/mpeg">
+  </audio>  
+
+  <audio id="checkpoint" preload="auto">
+  <source src="resources/checkpoint.mp3" type="audio/mpeg">
+  </audio>  
+
+  <audio id="goal" preload="auto">
+  <source src="resources/goal.mp3" type="audio/mpeg">
+  </audio>
+  
+  <audio id="run" preload="auto" autoplay loop>
+  <source src="resources/run.mp3" type="audio/mpeg">
+  </audio> 
+        
+  </body>
+</html>

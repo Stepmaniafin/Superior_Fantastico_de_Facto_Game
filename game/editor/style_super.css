@@ -1,0 +1,63 @@
+@font-face {
+ font-family:vampyre;
+ src: url(fonts/vampyre.ttf);
+}
+
+body {
+  /* background: linear-gradient(lightgrey, white); */
+  background-image: url('tausta.jpg');
+  text-align: center;
+  font-family: vampyre;
+  color: white;
+}
+h1 {
+  font-family: vampyre;
+  color: white;
+  text-align:center;
+}
+#game {
+  background-image: url('pohja.png');
+  width:3240px;
+  height:2880px;
+  text-align:center;
+  margin: auto;
+  border: 5px solid white;
+}
+#container {
+
+  text-align:center;
+}
+
+#tools {
+position: fixed;
+bottom: 0px;
+background-color:rgba(0, 0, 0, 0.9);
+
+}
+
+
+table {
+margin: 0px;
+padding: 0px;
+border: 0px solid blue;
+border-collapse: collapse;
+}
+
+table, tr, th, td {
+border: 0px solid blue;
+}
+
+td {
+margin: 0px;
+padding: 0px;
+width: 24px;
+height: 24px;
+}
+
+#print img {
+border: 5px white solid;
+}
+  a:link {color:#FFFFFF;}      /* unvisited link */
+  a:visited {color:#FFFFFF;}  /* visited link */
+  a:hover {color:#FF0000;}  /* mouse over link */
+  a:active {color:#FF0000;}  /* selected link */
